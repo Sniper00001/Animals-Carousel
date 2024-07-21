@@ -12,6 +12,7 @@ const Carousel = () => {
   const { items } = useCarousel(); // Ensure useCarousel is defined and returns items correctly
 
   const sliderRef = useRef(null); // Check if sliderRef is properly used
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleAfterChange = (index) => {
@@ -52,9 +53,13 @@ const Carousel = () => {
 
       {/* Uncomment and check Thumbnail logic if needed */}
       <div className="thumbnail">
+        
+        
         {items.map((item, index) => (
           <Thumbnail key={index} item={item}  isActive={index === currentSlide} />
         ))}
+     
+       
       </div>
 
       <div className="Arrows">
